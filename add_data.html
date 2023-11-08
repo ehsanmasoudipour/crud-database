@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data List</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <ul>
+        {% for item in data %}
+            <li>{{ item.username }} (Age: {{ item.age }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_data' %}">Add Data</a>
+</body>
+</html>

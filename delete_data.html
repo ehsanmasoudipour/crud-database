@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Data</title>
+</head>
+<body>
+    <h1>Delete Data</h1>
+    <p>Are you sure you want to delete data for {{ data.username }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, Delete">
+    </form>
+    <a href="{% url 'data_list' %}">Cancel</a>
+</body>
+</html>
